@@ -171,6 +171,32 @@
     transition: all 0.3s;
     box-shadow: 0 0 30px rgba(0,240,255,0.3);
   }
+  .your-button-class {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px; /* Icon aur text ke beech gap */
+      padding: 14px 36px;
+      background: transparent;
+      color: var(--muted);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      /* Cyberpunk cut-out corner effect */
+      clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+      transition: all 0.3s ease;
+  }
+
+/* Hover effect ko matching banayein */
+.your-button-class:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: rgba(0,240,255,0.05); /* Halki neon glow background */
+    box-shadow: var(--glow); /* Neon glow effect */
+}
   .btn-primary:hover {
     background: transparent;
     color: var(--accent);
@@ -517,7 +543,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="https://vikasmaurya8307.github.io/Portfolio/resume.html" target="_blank" style="color:var(--accent);border:1px solid var(--accent);padding:6px 16px;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px));transition:all 0.3s;">Resume ↗</a></li>
+    <li><a href="resume.html" target="_blank" style="color:var(--accent);border:1px solid var(--accent);padding:6px 16px;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px));transition:all 0.3s;">Resume ↗</a></li>
   </ul>
 </nav>
 
@@ -536,7 +562,9 @@
   <div class="hero-btns">
     <a href="#projects" class="btn-primary">View My Work</a>
     <a href="#contact" class="btn-outline">Get In Touch</a>
-    <a href="https://vikasmaurya8307.github.io/Portfolio/resume.html" class="btn-outline" target="_blank">View Resume ↗</a>
+    <a href="resume.html" target="_blank" class="your-button-class">
+    <i class="fas fa-file-download"></i> View Resume
+</a>
   </div>
   <div class="scroll-indicator">
     <div class="scroll-line"></div>
@@ -610,52 +638,17 @@
     <h2 class="section-title">Featured Projects</h2>
   </div>
 
-  <div class="projects-grid">
-    <div class="project-card reveal">
-      <div class="project-num">01</div>
-      <div class="project-tags">
-        <span class="project-tag">Python</span>
-        <span class="project-tag">Pandas</span>
-      </div>
-      <h3 class="project-title">Data Analysis Insight</h3>
-      <p class="project-desc">Cleaned and analyzed complex datasets to find trends. Built visualizations for business decisions with actionable reporting.</p>
-      <a href="https://github.com/vikasmaurya8307/vikas_data_analysis_project_1" class="project-link" target="_blank">View on GitHub</a>
-    </div>
-
     <div class="project-card reveal">
       <div class="project-num">02</div>
       <div class="project-tags">
         <span class="project-tag">Python</span>
         <span class="project-tag">MySQL</span>
+         <span class="project-tag">Power Bi</span>
       </div>
-      <h3 class="project-title">Product Management CLI</h3>
+      <h3 class="project-title">Inventory-Management-System-End-to-End</h3>
       <p class="project-desc">CLI-based system to manage inventory and generate reports using MySQL database. Full CRUD operations with reporting.</p>
-      <a href="https://github.com/vikasmaurya8307/python-mysql-product-management-system_project_2" class="project-link" target="_blank">View on GitHub</a>
+      <a href="https://github.com/vikasmaurya8307/Inventory-Management-System-End-to-End.git" class="project-link" target="_blank">View on GitHub</a>
     </div>
-
-    <div class="project-card reveal">
-      <div class="project-num">03</div>
-      <div class="project-tags">
-        <span class="project-tag">Python</span>
-        <span class="project-tag">Backend</span>
-      </div>
-      <h3 class="project-title">Screens Backend</h3>
-      <p class="project-desc">Focused on core backend logic and database architectural designs for data-heavy applications at scale.</p>
-      <a href="https://github.com/vikasmaurya8307/Screens_backend_vikas" class="project-link" target="_blank">View on GitHub</a>
-    </div>
-
-    <div class="project-card reveal">
-      <div class="project-num">04</div>
-      <div class="project-tags">
-        <span class="project-tag">Python</span>
-        <span class="project-tag">SQL</span>
-      </div>
-      <h3 class="project-title">User Auth System</h3>
-      <p class="project-desc">Python script integrated with MySQL for secure user data management and full CRUD operations with authentication.</p>
-      <a href="https://github.com/vikasmaurya8307/SecureUser-Auth-Python-MySQL-Integration" class="project-link" target="_blank">View on GitHub</a>
-    </div>
-  </div>
-</section>
 
 <!-- CONTACT -->
 <section id="contact">
