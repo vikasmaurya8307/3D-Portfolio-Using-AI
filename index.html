@@ -344,6 +344,80 @@
   .info-key { font-size: 0.65rem; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; }
   .info-val { font-size: 0.75rem; color: var(--accent); }
 
+  /* EDUCATION SECTION STYLES */
+#education { flex-direction: column; align-items: center; }
+
+.edu-timeline {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    margin: 40px 0;
+    padding-left: 30px;
+}
+
+.edu-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 1px; height: 100%;
+    background: linear-gradient(to bottom, var(--accent), var(--accent2), transparent);
+}
+
+.edu-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+    transition: all 0.3s ease;
+}
+
+.edu-item:hover {
+    border-color: var(--accent);
+    box-shadow: var(--glow);
+    transform: translateX(10px);
+}
+
+.edu-item::before {
+    content: '';
+    position: absolute;
+    left: -35px; top: 35px;
+    width: 10px; height: 10px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent);
+}
+
+.edu-year {
+    font-size: 0.65rem;
+    color: var(--accent);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.edu-degree {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.edu-college {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+.edu-details {
+    font-size: 0.75rem;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.edu-details span { color: var(--text); }
+
   /* PROJECTS */
   #projects { flex-direction: column; }
   .projects-header { text-align: center; margin-bottom: 60px; }
@@ -543,6 +617,7 @@
   <ul class="nav-links">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="resume.html" target="_blank" style="color:var(--accent);border:1px solid var(--accent);padding:6px 16px;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px));transition:all 0.3s;">Resume ↗</a></li>
@@ -630,6 +705,49 @@
         <span class="info-val">Freelance + Full-time</span>
       </div>
     </div>
+  </div>
+</section>
+<!-- EDUCATION & CERTIFICATIONS -->
+<section id="education">
+  <div class="reveal">
+    <p class="section-label">Academic Path</p>
+    <h2 class="section-title">Education &<br>Certifications</h2>
+  </div>
+
+  <div class="edu-timeline">
+    <!-- Professional Training -->
+    <div class="edu-item reveal">
+      <span class="edu-year">// CURRENT SPECIALIZATION</span>
+      <span class="edu-year">15 Oct 2025 - 15 Apr 2026</span>
+      <h3 class="edu-degree">Data Analytics & Advanced Python</h3>
+      <p class="edu-college">Professional Certification</p>
+      <p class="edu-details">
+        Expertise in <span>SQL optimization</span>, <span>Pandas</span>, and <span>RESTful APIs</span>. 
+        Focusing on turning complex datasets into actionable business intelligence.
+      </p>
+    </div>
+
+    <!-- BCA -->
+    <div class="edu-item reveal">
+      <span class="edu-year">2022 — 2025</span>
+      <h3 class="edu-degree">Bachelor of Computer Applications (BCA)</h3>
+      <p class="edu-college">Govt. P.G. College, Ambala Cantt | Kurukshetra University</p>
+      <p class="edu-details">Core study in <span>Database Management Systems</span> and <span>Software Engineering</span>.</p>
+    </div>
+
+    <!-- 12th -->
+    <div class="edu-item reveal">
+      <span class="edu-year">2021</span>
+      <h3 class="edu-degree">Senior Secondary (12th)</h3>
+      <p class="edu-college">N.L.G.V.M. School, Vill - Tepla (HBSE)</p>
+      <p class="edu-details">Major in <span>Science Stream</span>.</p>
+    </div>
+     <!-- 10th -->
+    <div class="edu-item reveal">
+      <span class="edu-year">2019</span>
+      <h3 class="edu-degree">Senior Secondary (10th)</h3>
+      <p class="edu-college">N.L.G.V.M. School, Vill - Tepla (HBSE)</p>
+      <p class="edu-details">Focused on  <span>Mathematics and Science</span>.</p>
   </div>
 </section>
 
